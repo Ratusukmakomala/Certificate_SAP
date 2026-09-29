@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Certificate Verification - SAP BC400</title>
+  <title>Certificate Verification - SAP BC400 v2</title>
 
   <meta
     name="description"
@@ -16,216 +16,310 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #071a33, #0d3b66);
-      color: #172033;
       min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(135deg, #06172d 0%, #0b3158 55%, #0d4b78 100%);
+      color: #172033;
     }
 
     .wrap {
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 45px 20px;
+      padding: 50px 20px;
     }
+
+    /* =========================
+       HEADER
+       ========================= */
 
     .hero {
       text-align: center;
-      color: white;
-      margin-bottom: 28px;
+      color: #ffffff;
+      margin-bottom: 30px;
     }
 
     .brand {
       display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,.3);
-      border-radius: 30px;
+      padding: 9px 18px;
+      border: 1px solid rgba(255,255,255,.30);
+      border-radius: 999px;
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: 2px;
       margin-bottom: 18px;
+      background: rgba(255,255,255,.06);
     }
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 34px;
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: 36px;
       line-height: 1.2;
+      font-weight: 700;
     }
 
     .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #dbe8f5;
-      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #d8e7f5;
       font-size: 15px;
+      line-height: 1.7;
     }
 
+    /* =========================
+       MAIN CARD
+       ========================= */
+
     .card {
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.28);
     }
+
+    /* =========================
+       STATUS
+       ========================= */
 
     .status {
       display: flex;
       align-items: center;
-      gap: 10px;
-      background: #eefaf3;
-      color: #197044;
-      border: 1px solid #c8ecd7;
+      gap: 11px;
+      padding: 14px 17px;
+      margin-bottom: 26px;
+
+      background: #edf9f2;
+      border: 1px solid #c8ead6;
       border-radius: 12px;
-      padding: 13px 16px;
-      font-weight: bold;
-      margin-bottom: 25px;
+
+      color: #187044;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .dot {
       width: 11px;
       height: 11px;
-      background: #20a464;
+      flex-shrink: 0;
       border-radius: 50%;
-      display: inline-block;
+      background: #20a464;
       box-shadow: 0 0 0 4px rgba(32,164,100,.12);
     }
 
+    /* =========================
+       CERTIFICATE DETAILS
+       ========================= */
+
     .details {
       margin: 0;
-      display: grid;
-      gap: 0;
+      padding: 0;
     }
 
     .details div {
       display: grid;
       grid-template-columns: 220px 1fr;
       gap: 20px;
-      padding: 15px 0;
+
+      padding: 16px 0;
+
       border-bottom: 1px solid #e8edf3;
     }
 
+    .details div:first-child {
+      padding-top: 5px;
+    }
+
     .details dt {
+      margin: 0;
+      color: #687386;
       font-size: 13px;
-      color: #6b7280;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .details dd {
       margin: 0;
-      font-size: 15px;
       color: #172033;
+      font-size: 15px;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
+    /* =========================
+       COURSE BOX
+       ========================= */
+
     .scores {
-      margin-top: 25px;
+      margin-top: 28px;
     }
 
     .total {
-      border-radius: 15px;
-      padding: 20px;
-      background: linear-gradient(135deg, #eef5ff, #f7fbff);
-      border: 1px solid #d8e6f5;
+      padding: 22px;
       text-align: center;
+
+      background: linear-gradient(
+        135deg,
+        #edf5ff,
+        #f8fbff
+      );
+
+      border: 1px solid #d7e5f4;
+      border-radius: 16px;
     }
 
     .total span {
       display: block;
+      margin-bottom: 6px;
       color: #64748b;
       font-size: 13px;
-      margin-bottom: 5px;
+      font-weight: 600;
     }
 
     .total strong {
       display: block;
-      color: #0d3b66;
-      font-size: 25px;
+      color: #0b3a66;
+      font-size: 27px;
       letter-spacing: 1px;
     }
+
+    /* =========================
+       BUTTONS
+       ========================= */
 
     .actions {
       display: flex;
       gap: 12px;
-      margin-top: 25px;
+      margin-top: 28px;
     }
 
     .button {
       flex: 1;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
+
+      min-height: 50px;
+      padding: 13px 18px;
+
+      border-radius: 11px;
+      border: 0;
+
       font-size: 14px;
-      font-weight: bold;
-      transition: .2s ease;
+      font-weight: 700;
+
+      text-decoration: none;
+      cursor: pointer;
+
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
     }
 
     .button.primary {
-      background: #0d3b66;
-      color: white;
+      color: #ffffff;
+      background: #0b3a66;
+      box-shadow: 0 8px 20px rgba(11,58,102,.18);
     }
 
     .button.primary:hover {
-      background: #092b4a;
+      background: #082d50;
     }
 
     .button.secondary {
-      background: #f1f5f9;
       color: #334155;
+      background: #eef2f7;
     }
 
     .button.secondary:hover {
       background: #e2e8f0;
     }
 
+    /* =========================
+       COPY MESSAGE
+       ========================= */
+
     .copied {
+      min-height: 20px;
+      margin: 13px 0 0;
+
       text-align: center;
+
       color: #198754;
       font-size: 13px;
-      min-height: 20px;
-      margin: 12px 0 0;
+      font-weight: 600;
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
+
     footer {
+      margin-top: 26px;
       text-align: center;
-      color: #dbe8f5;
-      margin-top: 25px;
+      color: #d7e5f3;
       font-size: 13px;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    footer p {
+      margin: 7px 0;
     }
 
     footer strong {
-      color: white;
+      color: #ffffff;
     }
 
     footer .muted {
-      color: #b9c9d9;
+      color: #b8c9da;
     }
 
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 650px) {
+
       .wrap {
         padding: 30px 15px;
       }
 
-      h1 {
-        font-size: 27px;
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 14px;
       }
 
       .card {
-        padding: 20px;
-        border-radius: 16px;
+        padding: 21px;
+        border-radius: 17px;
       }
 
       .details div {
         grid-template-columns: 1fr;
-        gap: 5px;
+        gap: 6px;
+        padding: 14px 0;
+      }
+
+      .details dt {
+        font-size: 12px;
+      }
+
+      .details dd {
+        font-size: 14px;
       }
 
       .actions {
@@ -235,6 +329,10 @@
       .button {
         width: 100%;
       }
+
+      .total strong {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -242,6 +340,10 @@
 <body>
 
   <main class="wrap">
+
+    <!-- =========================
+         HEADER
+         ========================= -->
 
     <section class="hero">
 
@@ -261,12 +363,25 @@
 
     </section>
 
+
+    <!-- =========================
+         CERTIFICATE CARD
+         ========================= -->
+
     <section class="card">
 
+      <!-- STATUS -->
+
       <div class="status">
+
         <span class="dot"></span>
+
         Certificate SAP
+
       </div>
+
+
+      <!-- CERTIFICATE INFORMATION -->
 
       <dl class="details">
 
@@ -282,7 +397,9 @@
 
         <div>
           <dt>Institusi</dt>
-          <dd>Universitas Logistik dan Bisnis Internasional</dd>
+          <dd>
+            Universitas Logistik dan Bisnis Internasional
+          </dd>
         </div>
 
         <div>
@@ -292,49 +409,76 @@
 
         <div>
           <dt>Course</dt>
-          <dd>BC400 - Introduction to the ABAP Workbench</dd>
+          <dd>
+            BC400 - Introduction to the ABAP Workbench
+          </dd>
         </div>
 
         <div>
           <dt>Jenis Sertifikat</dt>
-          <dd>Certificate of Accomplishment</dd>
+          <dd>
+            Certificate of Accomplishment
+          </dd>
         </div>
 
         <div>
           <dt>Tanggal Sertifikat</dt>
-          <dd>22 January 2024</dd>
+          <dd>
+            22 January 2024
+          </dd>
         </div>
 
         <div>
           <dt>ID Sertifikat</dt>
-          <dd>550163779</dd>
+          <dd>
+            550163779
+          </dd>
         </div>
 
         <div>
           <dt>Penerbit</dt>
-          <dd>PT. Harfan Tri Megah (EDUGATE)</dd>
+          <dd>
+            PT. Harfan Tri Megah (EDUGATE)
+          </dd>
         </div>
 
         <div>
           <dt>Penandatangan</dt>
-          <dd>Indri L. Sibarani</dd>
+          <dd>
+            Indri L. Sibarani
+          </dd>
         </div>
 
         <div>
           <dt>Jabatan</dt>
-          <dd>Director</dd>
+          <dd>
+            Director
+          </dd>
         </div>
 
       </dl>
 
+
+      <!-- COURSE -->
+
       <div class="scores">
 
         <div class="total">
-          <span>SAP Course</span>
-          <strong>BC400</strong>
+
+          <span>
+            SAP Course
+          </span>
+
+          <strong>
+            BC400
+          </strong>
+
         </div>
 
       </div>
+
+
+      <!-- BUTTONS -->
 
       <div class="actions">
 
@@ -347,6 +491,7 @@
           Lihat Sertifikat PDF
         </a>
 
+
         <button
           type="button"
           class="button secondary"
@@ -357,6 +502,9 @@
 
       </div>
 
+
+      <!-- COPY MESSAGE -->
+
       <p
         id="copied"
         class="copied"
@@ -364,6 +512,11 @@
       ></p>
 
     </section>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer>
 
@@ -375,26 +528,41 @@
       <p class="muted">
         Halaman ini merupakan halaman verifikasi online
         untuk dokumen Certificate of Accomplishment
-        SAP Course BC400.
+        SAP Course BC400 - Introduction to the ABAP Workbench.
       </p>
 
     </footer>
 
   </main>
 
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
   <script>
+
     function copyLink() {
+
       navigator.clipboard
         .writeText(window.location.href)
-        .then(() => {
+
+        .then(function () {
+
           document.getElementById('copied').textContent =
             'Link berhasil disalin.';
+
         })
-        .catch(() => {
+
+        .catch(function () {
+
           document.getElementById('copied').textContent =
             window.location.href;
+
         });
+
     }
+
   </script>
 
 </body>
