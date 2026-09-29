@@ -1,11 +1,11 @@
 # Website Sertifikat Online
 
-Paket ini membuat halaman verifikasi publik untuk sertifikat nomor **251092753**.
+Paket ini membuat halaman verifikasi publik untuk sertifikat 
 
 ## Isi
 
 - `index.html` — halaman verifikasi.
-- `certificates/251092753.pdf` — PDF sertifikat asli.
+- `certificates/SAP.pdf` — PDF sertifikat asli.
 - `assets/style.css` — tampilan halaman.
 
 ## Cara online-kan dengan GitHub Pages
@@ -18,30 +18,5 @@ Paket ini membuat halaman verifikasi publik untuk sertifikat nomor **251092753**
 6. Setelah aktif, GitHub akan memberi URL seperti:
    `https://USERNAME.github.io/certificate/`
 
-URL tersebut menjadi halaman verifikasi sertifikat.
 
-### URL yang bisa dibagikan
 
-Setelah repository aktif, cukup bagikan:
-
-`https://USERNAME.github.io/certificate/`
-
-atau URL PDF:
-
-`https://USERNAME.github.io/certificate/certificates/251092753.pdf`
-
-> Ganti `USERNAME` dengan username GitHub kamu dan `certificate` dengan nama repository jika berbeda.
-
-## Data yang dimasukkan
-
-Data di halaman diambil dari sertifikat yang diberikan:
-- Nama: Ratu Sukmakomala
-- Nomor/NOREG: 251092753
-- Tes: TOEFL Prediction Test
-- Listening Comprehension: 48
-- Structure & Written Expression: 65
-- Reading Comprehension: 61
-- Total: 580
-- Test Date: October 5, 2025
-- Valid Until: October 5, 2027
-- Penerbit: English Domestic
