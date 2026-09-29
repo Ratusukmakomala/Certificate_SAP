@@ -1,58 +1,308 @@
 <!doctype html>
 <html lang="id">
+
 <head>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Certificate Verification</title>
-  <meta name="description" content="Halaman verifikasi sertifikat online.">
-  <link rel="stylesheet" href="assets/style.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>Certificate Verification - SAP BC400</title>
+
+  <meta
+    name="description"
+    content="Halaman verifikasi sertifikat SAP Course BC400 - Introduction to the ABAP Workbench."
+  >
+
+  <link
+    rel="stylesheet"
+    href="assets/style.css"
+  >
+
 </head>
+
+
 <body>
+
   <main class="wrap">
+
+
+    <!-- ================================
+         HEADER
+         ================================ -->
+
     <section class="hero">
-      <div class="brand">CERTIFICATE VERIFICATION</div>
-      <h1>Sertifikat Terverifikasi</h1>
-      <p class="muted">Gunakan nomor sertifikat untuk memeriksa dokumen yang diterbitkan.</p>
+
+      <div class="brand">
+        CERTIFICATE VERIFICATION
+      </div>
+
+      <h1>
+        Sertifikat Terverifikasi
+      </h1>
+
+      <p class="muted">
+        Gunakan informasi sertifikat berikut untuk
+        memeriksa dokumen Certificate of Accomplishment
+        yang diterbitkan untuk program SAP Course.
+      </p>
+
     </section>
+
+
+
+    <!-- ================================
+         CERTIFICATE INFORMATION
+         ================================ -->
 
     <section class="card">
-      <div class="status"><span class="dot"></span> Certificate record found</div>
+
+
+      <!-- STATUS -->
+
+      <div class="status">
+
+        <span class="dot"></span>
+
+        Certificate record found
+
+      </div>
+
+
+
+      <!-- DATA SERTIFIKAT -->
+
       <dl class="details">
-        <div><dt>Nama</dt><dd>Ratu Sukmakomala</dd></div>
-        <div><dt>Program / Tes</dt><dd>TOEFL Prediction Test</dd></div>
-        <div><dt>Nomor Sertifikat</dt><dd>251092753</dd></div>
-        <div><dt>Tanggal Tes</dt><dd>October 5, 2025</dd></div>
-        <div><dt>Berlaku Sampai</dt><dd>October 5, 2027</dd></div>
-        <div><dt>Penerbit</dt><dd>English Domestic</dd></div>
+
+
+        <div>
+          <dt>Nama</dt>
+
+          <dd>
+            Ratu Sukma Komala
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>ID Peserta</dt>
+
+          <dd>
+            1214007
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Institusi</dt>
+
+          <dd>
+            Universitas Logistik dan Bisnis Internasional
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Program</dt>
+
+          <dd>
+            SAP Course
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Course</dt>
+
+          <dd>
+            BC400 - Introduction to the ABAP Workbench
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Jenis Sertifikat</dt>
+
+          <dd>
+            Certificate of Accomplishment
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Tanggal Sertifikat</dt>
+
+          <dd>
+            22 January 2024
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>ID Sertifikat</dt>
+
+          <dd>
+            550163779
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Penerbit</dt>
+
+          <dd>
+            PT. Harfan Tri Megah (EDUGATE)
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Penandatangan</dt>
+
+          <dd>
+            Indri L. Sibarani
+          </dd>
+        </div>
+
+
+        <div>
+          <dt>Jabatan</dt>
+
+          <dd>
+            Director
+          </dd>
+        </div>
+
+
       </dl>
 
+
+
+      <!-- ================================
+           COURSE INFORMATION
+           ================================ -->
+
       <div class="scores">
-        <div><span>Listening Comprehension</span><strong>48</strong></div>
-        <div><span>Structure &amp; Written Expression</span><strong>65</strong></div>
-        <div><span>Reading Comprehension</span><strong>61</strong></div>
-        <div class="total"><span>Total</span><strong>580</strong></div>
+
+        <div class="total">
+
+          <span>
+            SAP Course
+          </span>
+
+          <strong>
+            BC400
+          </strong>
+
+        </div>
+
       </div>
+
+
+
+      <!-- ================================
+           ACTION BUTTONS
+           ================================ -->
 
       <div class="actions">
-        <a class="button primary" href="certificates/251092753.pdf" target="_blank" rel="noopener">Lihat Sertifikat PDF</a>
-        <button class="button secondary" onclick="copyLink()">Salin Link Verifikasi</button>
+
+
+        <a
+          class="button primary"
+          href="certificates/Certificate_SAP_ABAP_BC400_Ratu_Sukma_Komala.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Lihat Sertifikat PDF
+        </a>
+
+
+        <button
+          type="button"
+          class="button secondary"
+          onclick="copyLink()"
+        >
+          Salin Link Verifikasi
+        </button>
+
+
       </div>
-      <p id="copied" class="copied" aria-live="polite"></p>
+
+
+      <!-- COPY MESSAGE -->
+
+      <p
+        id="copied"
+        class="copied"
+        aria-live="polite"
+      ></p>
+
+
     </section>
 
+
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+
     <footer>
-      <p>Nomor sertifikat: <strong>251092753</strong></p>
-      <p class="muted">Halaman ini adalah halaman verifikasi online untuk dokumen sertifikat yang disimpan di repository ini.</p>
+
+      <p>
+        ID Sertifikat:
+        <strong>
+          550163779
+        </strong>
+      </p>
+
+      <p class="muted">
+
+        Halaman ini merupakan halaman verifikasi
+        online untuk dokumen Certificate of Accomplishment
+        SAP Course BC400 - Introduction to the ABAP Workbench.
+
+      </p>
+
     </footer>
+
+
   </main>
+
+
+
+  <!-- ================================
+       JAVASCRIPT
+       ================================ -->
+
   <script>
+
     function copyLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        document.getElementById('copied').textContent = 'Link berhasil disalin.';
-      }).catch(() => {
-        document.getElementById('copied').textContent = window.location.href;
-      });
+
+      navigator.clipboard
+        .writeText(window.location.href)
+
+        .then(() => {
+
+          document.getElementById('copied').textContent =
+            'Link berhasil disalin.';
+
+        })
+
+        .catch(() => {
+
+          document.getElementById('copied').textContent =
+            window.location.href;
+
+        });
+
     }
+
   </script>
+
+
 </body>
+
 </html>
