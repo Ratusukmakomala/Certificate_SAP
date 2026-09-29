@@ -1,38 +1,247 @@
 <!doctype html>
 <html lang="id">
-
 <head>
-
   <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Certificate Verification - SAP BC400</title>
 
   <meta
     name="description"
-    content="Halaman verifikasi sertifikat SAP Course BC400 - Introduction to the ABAP Workbench."
+    content="Halaman verifikasi Certificate of Accomplishment SAP Course BC400 - Introduction to the ABAP Workbench."
   >
 
-  <link
-    rel="stylesheet"
-    href="assets/style.css"
-  >
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #071a33, #0d3b66);
+      color: #172033;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 45px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #dbe8f5;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #eefaf3;
+      color: #197044;
+      border: 1px solid #c8ecd7;
+      border-radius: 12px;
+      padding: 13px 16px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      background: #20a464;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 4px rgba(32,164,100,.12);
+    }
+
+    .details {
+      margin: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .details div {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #e8edf3;
+    }
+
+    .details dt {
+      font-size: 13px;
+      color: #6b7280;
+      font-weight: bold;
+    }
+
+    .details dd {
+      margin: 0;
+      font-size: 15px;
+      color: #172033;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .scores {
+      margin-top: 25px;
+    }
+
+    .total {
+      border-radius: 15px;
+      padding: 20px;
+      background: linear-gradient(135deg, #eef5ff, #f7fbff);
+      border: 1px solid #d8e6f5;
+      text-align: center;
+    }
+
+    .total span {
+      display: block;
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .total strong {
+      display: block;
+      color: #0d3b66;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .button {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: .2s ease;
+    }
+
+    .button.primary {
+      background: #0d3b66;
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: #092b4a;
+    }
+
+    .button.secondary {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    .button.secondary:hover {
+      background: #e2e8f0;
+    }
+
+    .copied {
+      text-align: center;
+      color: #198754;
+      font-size: 13px;
+      min-height: 20px;
+      margin: 12px 0 0;
+    }
+
+    footer {
+      text-align: center;
+      color: #dbe8f5;
+      margin-top: 25px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer .muted {
+      color: #b9c9d9;
+    }
+
+    @media (max-width: 650px) {
+      .wrap {
+        padding: 30px 15px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .card {
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      .details div {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
   <main class="wrap">
-
-
-    <!-- ================================
-         HEADER
-         ================================ -->
 
     <section class="hero">
 
@@ -44,171 +253,90 @@
         Sertifikat Terverifikasi
       </h1>
 
-      <p class="muted">
-        Gunakan informasi sertifikat berikut untuk
-        memeriksa dokumen Certificate of Accomplishment
-        yang diterbitkan untuk program SAP Course.
+      <p>
+        Halaman verifikasi resmi untuk dokumen
+        Certificate of Accomplishment
+        SAP Course BC400 - Introduction to the ABAP Workbench.
       </p>
 
     </section>
 
-
-
-    <!-- ================================
-         CERTIFICATE INFORMATION
-         ================================ -->
-
     <section class="card">
 
-
-      <!-- STATUS -->
-
       <div class="status">
-
         <span class="dot"></span>
-
         Certificate record found
-
       </div>
-
-
-
-      <!-- DATA SERTIFIKAT -->
 
       <dl class="details">
 
-
         <div>
           <dt>Nama</dt>
-
-          <dd>
-            Ratu Sukma Komala
-          </dd>
+          <dd>Ratu Sukma Komala</dd>
         </div>
-
 
         <div>
           <dt>ID Peserta</dt>
-
-          <dd>
-            1214007
-          </dd>
+          <dd>1214007</dd>
         </div>
-
 
         <div>
           <dt>Institusi</dt>
-
-          <dd>
-            Universitas Logistik dan Bisnis Internasional
-          </dd>
+          <dd>Universitas Logistik dan Bisnis Internasional</dd>
         </div>
-
 
         <div>
           <dt>Program</dt>
-
-          <dd>
-            SAP Course
-          </dd>
+          <dd>SAP Course</dd>
         </div>
-
 
         <div>
           <dt>Course</dt>
-
-          <dd>
-            BC400 - Introduction to the ABAP Workbench
-          </dd>
+          <dd>BC400 - Introduction to the ABAP Workbench</dd>
         </div>
-
 
         <div>
           <dt>Jenis Sertifikat</dt>
-
-          <dd>
-            Certificate of Accomplishment
-          </dd>
+          <dd>Certificate of Accomplishment</dd>
         </div>
-
 
         <div>
           <dt>Tanggal Sertifikat</dt>
-
-          <dd>
-            22 January 2024
-          </dd>
+          <dd>22 January 2024</dd>
         </div>
-
 
         <div>
           <dt>ID Sertifikat</dt>
-
-          <dd>
-            550163779
-          </dd>
+          <dd>550163779</dd>
         </div>
-
 
         <div>
           <dt>Penerbit</dt>
-
-          <dd>
-            PT. Harfan Tri Megah (EDUGATE)
-          </dd>
+          <dd>PT. Harfan Tri Megah (EDUGATE)</dd>
         </div>
-
 
         <div>
           <dt>Penandatangan</dt>
-
-          <dd>
-            Indri L. Sibarani
-          </dd>
+          <dd>Indri L. Sibarani</dd>
         </div>
-
 
         <div>
           <dt>Jabatan</dt>
-
-          <dd>
-            Director
-          </dd>
+          <dd>Director</dd>
         </div>
 
-
       </dl>
-
-
-
-      <!-- ================================
-           COURSE INFORMATION
-           ================================ -->
 
       <div class="scores">
 
         <div class="total">
-
-          <span>
-            SAP Course
-          </span>
-
-          <strong>
-            BC400
-          </strong>
-
+          <span>SAP Course</span>
+          <strong>BC400</strong>
         </div>
 
       </div>
 
-
-
-      <!-- ================================
-           ACTION BUTTONS
-           ================================ -->
-
       <div class="actions">
-
 
         <a
           class="button primary"
@@ -219,7 +347,6 @@
           Lihat Sertifikat PDF
         </a>
 
-
         <button
           type="button"
           class="button secondary"
@@ -228,11 +355,7 @@
           Salin Link Verifikasi
         </button>
 
-
       </div>
-
-
-      <!-- COPY MESSAGE -->
 
       <p
         id="copied"
@@ -240,69 +363,39 @@
         aria-live="polite"
       ></p>
 
-
     </section>
-
-
-
-    <!-- ================================
-         FOOTER
-         ================================ -->
 
     <footer>
 
       <p>
         ID Sertifikat:
-        <strong>
-          550163779
-        </strong>
+        <strong>550163779</strong>
       </p>
 
       <p class="muted">
-
-        Halaman ini merupakan halaman verifikasi
-        online untuk dokumen Certificate of Accomplishment
-        SAP Course BC400 - Introduction to the ABAP Workbench.
-
+        Halaman ini merupakan halaman verifikasi online
+        untuk dokumen Certificate of Accomplishment
+        SAP Course BC400.
       </p>
 
     </footer>
 
-
   </main>
 
-
-
-  <!-- ================================
-       JAVASCRIPT
-       ================================ -->
-
   <script>
-
     function copyLink() {
-
       navigator.clipboard
         .writeText(window.location.href)
-
         .then(() => {
-
           document.getElementById('copied').textContent =
             'Link berhasil disalin.';
-
         })
-
         .catch(() => {
-
           document.getElementById('copied').textContent =
             window.location.href;
-
         });
-
     }
-
   </script>
 
-
 </body>
-
 </html>
